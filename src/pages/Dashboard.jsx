@@ -38,7 +38,7 @@ const Dashboard = () => {
         <tbody>
           {historico.map((registro) => (
             <tr key={registro.id || registro.created_at} style={{ borderBottom: '1px solid #eee', textAlign: 'center' }}>
-              <td style={{ padding: '12px' }}>{new Date(registro.created_at).toLocaleString('es-EC')}</td>
+              <td style={{ padding: '12px' }}>{new Date(registro.created_at).toLocaleString('es-EC', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false })}</td>
               <td style={{ padding: '12px' }}>{registro.temp}</td>
               <td style={{ padding: '12px' }}>{registro.presion}</td>
               <td style={{ padding: '12px' }}>{registro.humedad}</td>
