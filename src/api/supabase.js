@@ -1,7 +1,10 @@
 export const getSensorData = async () => {
+  // Obtenemos las variables correctamente desde el entorno de Vite
+  const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
+  const SUPABASE_KEY = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
+
   try {
     const response = await fetch(
-      // Se corrigió 'created_at' por 'creado_en' según tu esquema de Supabase
       `${SUPABASE_URL}/rest/v1/sensor_de_datos?select=*&order=creado_en.desc&limit=10`,
       {
         method: 'GET',
