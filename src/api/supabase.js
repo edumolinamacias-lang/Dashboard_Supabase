@@ -5,7 +5,7 @@ export const getSensorData = async () => {
 
   try {
     const response = await fetch(
-      `${SUPABASE_URL}/rest/v1/sensor_de_datos?select=*&order=creado_en.desc&limit=10`,
+      `${SUPABASE_URL}/rest/v1/datos_sensor?select=*&order=created_at.desc&limit=10`,
       {
         method: 'GET',
         headers: {
