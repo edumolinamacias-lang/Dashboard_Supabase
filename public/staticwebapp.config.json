@@ -5,5 +5,9 @@
       "/assets/*.{css,js,png,jpg,jpeg,gif,svg,ico}",
       "/*.{json,xml,txt}"
     ]
+  },
+  "mimeTypes": {
+    ".js": "application/javascript",
+    ".mjs": "application/javascript"
   }
 }
